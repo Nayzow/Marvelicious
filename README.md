@@ -16,20 +16,20 @@ La configuration YAML pour le déploiement des services est également présent�
 
 ### Frontend :
 - Web App Angular (Typescript)
-- Github : https://github.com/Nayzow/library-sh/tree/main/frontend
-- Docker Hub : https://hub.docker.com/r/nayzow/library-sh-frontend
+- Github : https://github.com/Nayzow/marvelicious/tree/main/frontend
+- Docker Hub : https://hub.docker.com/r/nayzow/marvelicious-frontend
 
 ### Backend :
 - Api Springboot (Java)
-- Github : https://github.com/Nayzow/library-sh/tree/main/backend
-- Docker Hub : https://hub.docker.com/r/nayzow/library-sh-backend
+- Github : https://github.com/Nayzow/marvelicious/tree/main/backend
+- Docker Hub : https://hub.docker.com/r/nayzow/marvelicious-backend
 
 ### Database :
 - Database MySQL
-- Github : https://github.com/Nayzow/library-sh/tree/main/database
-- Docker Hub : https://hub.docker.com/r/nayzow/library-sh-database
+- Github : https://github.com/Nayzow/marvelicious/tree/main/database
+- Docker Hub : https://hub.docker.com/r/nayzow/marvelicious-database
 
-### Server :
+### Serveur :
 
 L'application web tourne sur un serveur nginx dont le proxy redirige les requêtes à l'url :
 
@@ -51,12 +51,12 @@ Le déploiement est configuré pour tourner en local. Pour déployer le projet, 
 version: '3'
 services:
   database:
-    image: nayzow/library-sh-database
+    image: nayzow/marvelicious-database
     ports:
       - "3306:3306"
       
   api:
-    image: nayzow/library-sh-backend
+    image: nayzow/marvelicious-backend
     ports:
       - "8080:8080"
     depends_on:
@@ -64,12 +64,12 @@ services:
     restart: always
 
   app:
-    image: nayzow/library-sh-frontend
+    image: nayzow/marvelicious-frontend
     ports:
       - "80:80"
 ```
 
-Lien du fichier de déploiement : https://github.com/Nayzow/library-sh/blob/main/docker-compose.yaml
+Lien du fichier de déploiement : https://github.com/Nayzow/marvelicious/blob/main/docker-compose.yaml
 
 Et ensuite d'effectuer cette commande dans le répertoire courant du fichier "docker-compose.yaml" :
 

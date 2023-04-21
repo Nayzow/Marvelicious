@@ -1,12 +1,12 @@
 version: '3'
 services:
   database:
-    image: nayzow/library-sh-database
+    image: nayzow/marvelicious-database
     ports:
       - "3306:3306"
 
   api:
-    image: nayzow/library-sh-backend
+    image: nayzow/marvelicious-backend
     ports:
       - "8080:8080"
     depends_on:
@@ -14,6 +14,6 @@ services:
     restart: always
 
   app:
-    image: nayzow/library-sh-frontend
+    image: nayzow/marvelicious-frontend
     ports:
       - "80:80"

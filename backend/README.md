@@ -44,12 +44,22 @@ docker run --name books-service-backend -p 8080:8080 -d books-service-backend
 
 ### Routes de l'API
 
+### GET
+
 ```
 /books : renvoie touts les comics.
 ```
 
 ```
 /books/{id} : renvoie le comic avec un id donné.
+```
+
+```
+/books/{id}/statements : renvoie tous les comics disponibles lié à un comic avec un id donné.
+```
+
+```
+/books/{id}/comments : renvoie tous les commentaires lié à un comic avec un id donné.
 ```
 
 ```
@@ -61,11 +71,19 @@ docker run --name books-service-backend -p 8080:8080 -d books-service-backend
 ```
 
 ```
+/series/{id} : renvoie tous les comics lié à une série avec un id donné.
+```
+
+```
 /editors : renvoie touts les éditeurs de comics.
 ```
 
 ```
 /editors/{id} : renvoie l'éditeur de comics avec un id donné.
+```
+
+```
+/editors/{id}/series : renvoie toutes les séries de comics lié à un éditeur avec un id donné.
 ```
 
 ```
@@ -77,11 +95,11 @@ docker run --name books-service-backend -p 8080:8080 -d books-service-backend
 ```
 
 ```
-/libraries : renvoie toutes les bibliothèques utilisateur.
+/borrowings : renvoie toutes les emprunts des utilisateurs.
 ```
 
 ```
-/libraries/{id} : renvoie la bibliothèque utilisateur avec un id donné.
+/borrowings/{id} : renvoie un emprunt avec un id donné.
 ```
 
 ```
@@ -90,4 +108,72 @@ docker run --name books-service-backend -p 8080:8080 -d books-service-backend
 
 ```
 /users/{id} : renvoie un utilisateur avec un id donné.
+```
+
+```
+/users/{id} : renvoie tous les emprunts lié à un utilisateur avec un id donné.
+```
+
+```
+/login : renvoie l'utilisateur avec le username et le mot de passe correspondant.
+```
+
+### POST
+
+```
+/books : Ajouter un comic.
+```
+
+```
+/statements : Ajouter un état de comic.
+```
+
+```
+/borowings : Ajouter un emprunts.
+```
+
+```
+/comments : Ajouter un commentaire.
+```
+
+```
+/editors : Ajouter un éditeur
+```
+
+```
+/series : Ajouter une série de comics.
+```
+
+```
+/users : Ajouter un utilisateur.
+```
+
+#### DELETE
+
+```
+/books/{id} : Supprimer un comic.
+```
+
+```
+/statements/{id} : Supprimer un état de comic.
+```
+
+```
+/borowings/{id} : Supprimer un emprunt.
+```
+
+```
+/comments/{id} : Supprimer un commentaire.
+```
+
+```
+/editors/{id} : Supprimer un éditeur
+```
+
+```
+/series/{id} : Supprimer une série de comics.
+```
+
+```
+/users/{id} : Supprimer un utilisateur.
 ```
