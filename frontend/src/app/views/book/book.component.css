@@ -1,0 +1,90 @@
+.book-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.book-image {
+  margin-top: 30px;
+  margin-left: 150px;
+}
+
+.book-image img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.book-info {
+  margin-top: 30px;
+  width: 65%;
+}
+
+.book-info h2 {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.book-info p {
+  font-size: 18px;
+  margin-right: 60px;
+}
+
+.book-info .book-author::before {
+  content: "Auteur : ";
+  font-weight: bold;
+}
+
+.book-info .book-illustrator::before {
+  content: "Illustrateur : ";
+  font-weight: bold;
+}
+
+.book-info .book-date::before {
+  content: "Date : ";
+  font-weight: bold;
+}
+
+.book-info .book-tome::before {
+  content: "Tome : ";
+  font-weight: bold;
+}
+
+.book-info .book-description::before {
+  content: "Description : ";
+  font-weight: bold;
+}
+
+.book-info .book-series::before {
+  content: "Serie : ";
+  font-weight: bold;
+}
+
+.book-info .book-editor::before {
+  content: "Editeur : ";
+  font-weight: bold;
+}
+
+/* Style for dark background */
+a {
+  color: white;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+h2,
+.book-series, .book-editor {
+  color: #ffbe0b;
+}
+
+@media (max-width: 800px) {
+  .others {
+    margin: 0;
+    text-align: center;
+  }
+}

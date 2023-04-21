@@ -1,0 +1,9 @@
+.book-title {
+  text-align: center;
+}
+
+:host .list-item {
+  border-radius: 13px;
+  width: 230px;
+  height: 350px;
+}

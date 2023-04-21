@@ -1,0 +1,19 @@
+version: '3'
+services:
+  database:
+    image: nayzow/library-sh-database
+    ports:
+      - "3306:3306"
+
+  api:
+    image: nayzow/library-sh-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    restart: always
+
+  app:
+    image: nayzow/library-sh-frontend
+    ports:
+      - "80:80"

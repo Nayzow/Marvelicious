@@ -1,0 +1,56 @@
+.editor-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.editor-image {
+  margin-top: 30px;
+  margin-left: 80px;
+}
+
+.editor-image img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.editor-info {
+  margin-top: 30px;
+  width: 65%;
+}
+
+.editor-info h2 {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.editor-info p {
+  font-size: 18px;
+}
+
+.editor-info .editor-name::before {
+  content: "Editor : ";
+  font-weight: bold;
+}
+
+.editor-info .editor-description::before {
+  content: "Description : ";
+  font-weight: bold;
+}
+
+/* Style for dark background */
+a {
+  color: white;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+h2 {
+  color: #ffbe0b;
+}

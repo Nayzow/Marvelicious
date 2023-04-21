@@ -1,0 +1,37 @@
+<ng-container *ngIf="book$ | async as book; else loading">
+  <div class="book-details">
+    <div class="book-image">
+      <img src="{{book?.image}}" alt="{{book?.title}}"/>
+    </div>
+    <div class="book-info">
+      <h2>{{book?.title}}</h2>
+      <p class="book-author">{{book?.author}}</p>
+      <p class="book-illustrator">{{book?.illustrator}}</p>
+      <p class="book-date">{{book?.date}}</p>
+      <p class="book-tome">{{book?.tome}}</p>
+      <p class="book-description">{{book?.description}}</p>
+      <p class="book-series">{{book?.serie?.name}}</p>
+      <p class="book-editor">{{book?.serie?.editor?.name}}</p>
+    </div>
+  </div>
+
+  <h2 class="others">Offre(s) disponible(s) pour ce comic de {{book?.serie?.name}}</h2>
+
+  <ng-container *ngIf="booksStatement$ | async as booksStatement;">
+    <app-scrollableBooksStatementList [booksStatement]="booksStatement"></app-scrollableBooksStatementList>
+  </ng-container>
+
+  <h2 class="others"><img src="{{book?.serie?.image}}"> Autres comics de la série {{book?.serie?.name}}</h2>
+
+  <ng-container *ngIf="otherBooks$ | async as books;">
+    <app-scrollableBooksList [books]="books"></app-scrollableBooksList>
+  </ng-container>
+
+  <ng-container *ngIf="comments$ | async as comments;">
+    <app-comments [comments]="comments"></app-comments>
+  </ng-container>
+</ng-container>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

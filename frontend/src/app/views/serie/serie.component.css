@@ -1,0 +1,58 @@
+.serie-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.serie-image {
+  margin-top: 30px;
+  margin-left: 120px;
+  margin-right: 30px;
+}
+
+.serie-image img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.serie-info {
+  margin-top: 30px;
+  width: 60%;
+}
+
+.serie-info h2 {
+  font-size: 36px;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.serie-info p {
+  font-size: 18px;
+  margin-right: 60px;
+}
+
+.serie-info .serie-editor::before {
+  content: "Editeur : ";
+  font-weight: bold;
+}
+
+.serie-info .serie-description::before {
+  content: "Description : ";
+  font-weight: bold;
+}
+
+/* Style for dark background */
+a {
+  color: white;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+h2 {
+  color: #ffbe0b;
+}

@@ -1,0 +1,21 @@
+<ng-container *ngIf="editor$ | async as editor; else loading">
+  <div class="editor-details">
+    <div class="editor-image">
+      <img src="{{editor?.image}}" alt="{{editor?.name}}"/>
+    </div>
+    <div class="editor-info">
+      <h2>{{editor?.name}}</h2>
+      <p class="editor-description">{{editor?.description}}</p>
+    </div>
+  </div>
+
+  <h2 class="others">Séries de comics de l'éditeur {{editor?.name}}</h2>
+
+  <ng-container *ngIf="series$ | async as series">
+    <app-scrollableSeriesList [series]="series" ></app-scrollableSeriesList>
+  </ng-container>
+</ng-container>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

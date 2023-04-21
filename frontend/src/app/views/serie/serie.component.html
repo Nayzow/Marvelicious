@@ -1,0 +1,22 @@
+<ng-container *ngIf="serie$ | async as serie; else loading">
+  <div class="serie-details">
+    <div class="serie-image">
+      <img src="{{serie?.image}}" alt="{{serie?.name}}"/>
+    </div>
+    <div class="serie-info">
+      <h2>{{serie?.name}}</h2>
+      <p class="serie-editor">{{serie?.editor?.name}}</p>
+      <p class="serie-description">{{serie?.description}}</p>
+    </div>
+  </div>
+
+  <h2 class="others">Comics de la série {{serie?.name}}</h2>
+
+  <ng-container *ngIf="books$ | async as books">
+      <app-scrollableBooksList [books]="books"></app-scrollableBooksList>
+  </ng-container>
+</ng-container>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

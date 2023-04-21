@@ -1,0 +1,115 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #444444;
+  color: #fff;
+}
+
+.navbar .logo {
+  margin-left: 15px;
+}
+
+
+.nav-title {
+  margin-left: 10px;
+  font-size: 23px;
+  color: #F6CB05;
+}
+.navbar .nav-links {
+  display: flex;
+  font-size: 16px;
+}
+
+.navbar .nav-links a {
+  margin-left: 20px;
+  color: #d5d5d5;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+  color: #FFC107;
+  text-decoration: underline;
+}
+
+.nav-auth {
+  margin-left: auto;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.auth-button {
+  margin-left: 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.auth-button img {
+  width: 40px;
+}
+
+.auth-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.auth-menu a {
+  color: #444;
+  display: flex;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.auth-menu a:hover {
+  background-color: #eee;
+}
+
+.nav-auth:hover .auth-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .logo,
+  .nav-title {
+    margin: 10px auto 0;
+    display: block;
+    text-align: center;
+  }
+
+  .nav-auth {
+    margin-left: 0;
+    margin-right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .navbar .nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar .nav-links a {
+    margin: 0 10px 10px;
+  }
+}
