@@ -1,13 +1,13 @@
-# Endpoint.sh Database
+# Marvelicious database
 
-Base de donnée MySql pour stocker les données du projet. La base de données contient de la documentation informatique avec des articles sur des technologies ainsi que les principales commandes utiles de ces dernières.
+Base de donnée MySql pour stocker les données du projet. La base de données contient des comics lié à séries et auteur, ainsi que des utilisateurs pouvant commenter et emprunter des comics.
 
 ## Informations
 
 Le script SQL pour la création de la base de donnée se situe dans le dossier resources.
 
 ```
-database : documentation
+database : library
 login : root
 password : test
 ```
@@ -17,13 +17,13 @@ password : test
 #### 1. Build l'image
 
 ```bash
-docker build -t endpoint-sh-database .
+docker build -t marvelicious-database .
 ```
 
 #### 2. Lancer le container à partir de l'image
 
 ```bash
-docker run --name endpoint-sh-database -p 3306:3306 -d endpoint-sh-database
+docker run --name marvelicious-database -p 3306:3306 -d marvelicious-database
 ```
 
 ## UML
