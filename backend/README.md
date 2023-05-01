@@ -2,9 +2,7 @@
 
 API Java Springboot qui renvoie des données relatives à des comics.
 
-Lien de l'application web Angular pour afficher les données : https://github.com/Nayzow/books-service-backend
-
-## Get Started
+## Installation
 
 #### 1. Clonez le dépôt du projet en utilisant la commande
 
